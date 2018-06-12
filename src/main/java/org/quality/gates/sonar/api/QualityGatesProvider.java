@@ -81,9 +81,11 @@ public class QualityGatesProvider {
                 }
             }
 
-            if (attemptsToRepeat < timesExecuted++) {
+            /*
+			if (attemptsToRepeat < timesExecuted++) {
                 throw new MaxExecutionTimeException("Max time to wait sonar job!");
             }
+			*/
         } while (taskAnalysisRunning);
 
         String requesterResult = getRequesterResult(jobConfigData, validatedData);
